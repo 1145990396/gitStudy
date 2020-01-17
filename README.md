@@ -5,6 +5,8 @@
 ### [下载 git Windows 版](https://gitforwindows.org/)
 ### [下载 git Linux 版](https://book.git-scm.com/2_installing_git.html)
 
-## 首先你得注册一个自己的GitHub账号，注册网址：https://github.com/join
-
-> 而面向过程语言大多都是直接编译成机械码在电脑上执行，并且其它一些面向过程的脚本语言性能也并不一定比Java好。
+> 首先你得注册一个自己的GitHub账号，注册网址：https://github.com/join
+> 有了自己的账号以后，就可以进行登录，
+> 创建一个新的项目，填写项目名称，描述
+> 创建完成之后，跳转到下面的页面，下面红框中的网址要记住，在后面上传代码的时候需要使用
+> 接下来，我们需要先下载Git，这里最好下载最新版本的Git，这里附上我下载的Git2.6.2的网址：https://git-scm.com/downloads，安装时如果没有特殊需求，一直下一步就可以了，安装完成之后，双击打开Git Bash
