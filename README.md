@@ -5,7 +5,7 @@
 ### [下载 git Windows 版](https://gitforwindows.org/)
 ### [下载 git Linux 版](https://book.git-scm.com/2_installing_git.html)
 
-> 首先你得注册一个自己的GitHub账号，注册网址：https://github.com/join
+## 首先你得注册一个自己的GitHub账号，注册网址：https://github.com/join
 > 有了自己的账号以后，就可以进行登录，
 > 创建一个新的项目，填写项目名称，描述
 > 创建完成之后，跳转到下面的页面，下面红框中的网址要记住，在后面上传代码的时候需要使用
