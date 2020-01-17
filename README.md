@@ -34,7 +34,7 @@
 **添加和提交**
 > 你可以提出更改（把它们添加到暂存区），使用如下命令：
 >
-> git add <filename>
+> git add filename
 >
 > git add *
 >
