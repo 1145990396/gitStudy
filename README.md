@@ -7,3 +7,4 @@
 
 
 首先你得注册一个自己的GitHub账号，注册网址：https://github.com/join
+- [首先你得注册一个自己的GitHub账号，注册网址：https://github.com/join]
