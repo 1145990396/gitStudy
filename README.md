@@ -143,11 +143,7 @@
 > ```git reset --hard origin/master```
 >
 ## 实用小贴士
-- **内建的图形化 git：**
-- **gitk**
-- **彩色的 git 输出：**
-- **git config color.ui true**
-- **显示历史记录时，每个提交的信息只显示一行：**
-- **git config format.pretty oneline**
-- **交互式添加文件到暂存区：**
-- **git add -i**
+- **内建的图形化 git：```gitk```**
+- **彩色的 git 输出：```git config color.ui true```**
+- **显示历史记录时，每个提交的信息只显示一行：```git config format.pretty oneline：```**
+- **交互式添加文件到暂存区：```git add -i```**
