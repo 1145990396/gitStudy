@@ -5,4 +5,4 @@
 ### [下载 git Windows 版](https://gitforwindows.org/)
 ### [下载 git Linux 版](https://book.git-scm.com/2_installing_git.html)
 
-## [首先你得注册一个自己的GitHub账号，注册网址：https://github.com/join]
+## 首先你得注册一个自己的GitHub账号，注册网址：https://github.com/join
