@@ -11,7 +11,7 @@
 3. 创建完成之后，跳转到下面的页面，记住网址，在后面上传代码的时候需要使用
 4. 接下来，我们需要先下载Git，这里最好下载最新版本的Git，这里附上我下载的Git2.6.2的网址：https://git-scm.com/downloads，安装时如果没有特殊需求，一直下一步就可以了，安装完成之后，双击打开Git Bash
 
-## 创建新仓库
+**创建新仓库**
 > 创建新文件夹，打开，然后执行
 > 
 > git int
@@ -25,4 +25,5 @@
 > 
 > 如果是远端服务器上的仓库，你的命令会是这个样子：
 >
-> git clone username@host:/path/to/repository
+> git clone https://github.com/1145990396/JavaGuide.git
+
