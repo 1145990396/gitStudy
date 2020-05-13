@@ -1,14 +1,9 @@
-# 《史上最简单的 git - 简明指南 教程》
+## 《史上最简单的 git - 简明指南 教程》
+### 助你入门 git 的简明指南，木有高深内容
 
-== 在Linux上安装<br>
-首先，你可以试着输入`git`,看看系统有没有安装Git；<br>
-----
-$ git
-The program 'git' is currently not installed. You can install it by typing:
-sudo apt-get install git
-----
-
-### [下载 git 国内镜像版](https://github.com/waylau/git-for-win)
+### [下载 git OSX 版](https://git-scm.com/download/mac)
+### [下载 git Windows 版](https://gitforwindows.org/)
+### [下载 git Linux 版](https://book.git-scm.com/2_installing_git.html)
 
 #### 首先你得注册一个自己的GitHub账号，注册网址：https://github.com/join
 1. 有了自己的账号以后，就可以进行登录，开始创建一个新的项目
