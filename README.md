@@ -34,10 +34,17 @@
 - **在Linux上安装Git**
 
 首先，你可以试着输入git，看看系统有没有安装Git：
-> $git
+> $ git
 >
 > The program 'git' is currently not installed. You can install it by typing:sudo apt-get install git
 
+像上面的命令，有很多Linux会友好地告诉你Git没有安装，还会告诉你如何安装Git。
+
+如果你碰巧用Debian或Ubuntu Linux，通过一条`sudo apt-get install` git就可以直接完成Git的安装，非常简单。
+
+老一点的Debian或Ubuntu Linux，要把命令改为`sudo apt-get install git-core`，因为以前有个软件也叫GIT（GNU Interactive Tools），结果Git就只能叫`git-core`了。由于Git名气实在太大，后来就把GNU Interactive Tools改成gnuit，git-core正式改为git。
+
+如果是其他Linux版本，可以直接通过源码安装。先从Git官网下载源码，然后解压，依次输入：`./config`，`make`，`sudo make install`这几个命令安装就好了。
 
 ## 创建版本库
 ## 时光机穿梭
