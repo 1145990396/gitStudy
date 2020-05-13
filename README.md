@@ -59,7 +59,12 @@
 Xcode是Apple官方IDE，功能非常强大，是开发Mac和iOS App的必选装备，而且是免费的！
 
 - **在Windows上安装Git**
+
 在Windows上使用Git，可以从[Git官网](https://git-scm.com/downloads)直接下载安装程序，然后按默认选项安装即可。
+
+国内官网下载较慢，建议从[国内镜像下载](https://github.com/waylau/git-for-win)
+
+安装完成后，在开始菜单里找到`Git`->`Git Bash`，蹦出一个类似命令行窗口的东西，就说明Git安装成功！
 
 
 ## 创建版本库
