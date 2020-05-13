@@ -2,7 +2,8 @@
 
 ==在Linux上安装<br>
 首先，你可以试着输入`git`,看看系统有没有安装Git；<br>
-----$git<br>
+[source, java, indent = 0]
+----$git
 The program 'git' is currently not installed. You can install it by typing:
 sudo apt-get install git
 ----
