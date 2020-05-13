@@ -4,7 +4,7 @@
 首先，你可以试着输入`git`,看看系统有没有安装Git；<br>
 ```$git```<br>
 The program 'git' is currently not installed. You can install it by typing:
-sudo apt-get install git
+sudo apt-get install git```
 
 ### [下载 git 国内镜像版](https://github.com/waylau/git-for-win)
 
