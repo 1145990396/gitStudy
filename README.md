@@ -32,8 +32,10 @@
 
 ## 安装Git
 - **在Linux上安装Git**
+
 首先，你可以试着输入git，看看系统有没有安装Git：
 > $git
+>
 > The program 'git' is currently not installed. You can install it by typing:sudo apt-get install git
 
 
