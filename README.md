@@ -1,5 +1,11 @@
-## 《史上最简单的 git - 简明指南 教程》
-### 助你入门 git 的简明指南，木有高深内容
+# 《git - 简明指南 教程》
+
+####在Linux上安装Git
+> 
+> ```$ git
+The program 'git' is currently not installed. You can install it by typing:
+sudo apt-get install git```
+> 
 
 ### [下载 git OSX 版](https://git-scm.com/download/mac)
 ### [下载 git Windows 版](https://gitforwindows.org/)
