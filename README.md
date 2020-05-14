@@ -690,6 +690,31 @@ rebase操作可以把本地未push的分叉提交历史整理成直线；
 rebase的目的是使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比。
 ## 标签管理
 ### 创建标签
+在Git中打标签非常简单，首先，切换到需要打标签的分支上：
+
+> $ git switch <name>
+
+然后，敲命令git tag <name>就可以打一个新标签：
+
+> $ git tag v1.0
+
+注意，标签不是按时间顺序列出，而是按字母排序的。可以用git show <tagname>查看标签信息：
+
+> $ git show v0.9
+
+还可以创建带有说明的标签，用-a指定标签名，-m指定说明文字：
+
+> $ git tag -a v0.1 -m "version 0.1 released" 1094adb
+
+用命令git show <tagname>可以看到说明文字：
+
+> $ git show v0.1
+
+命令git tag <tagname>用于新建一个标签，默认为HEAD，也可以指定一个commit id；
+
+命令git tag -a <tagname> -m "blablabla..."可以指定标签信息；
+
+命令git tag可以查看所有标签。
 ### 操作标签
 ## 使用GitHub
 ## 使用Gitee
