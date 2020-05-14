@@ -65,7 +65,7 @@ Xcode是Apple官方IDE，功能非常强大，是开发Mac和iOS App的必选装
 国内官网下载较慢，建议从[国内镜像下载](https://github.com/waylau/git-for-win)
 
 安装完成后，在开始菜单里找到`Git`->`Git Bash`，蹦出一个类似命令行窗口的东西，就说明Git安装成功！
-![在Mac OS X上安装Git](https://github.com/1145990396/git/blob/master/Photo/1.png?raw=true)
+![在Windows上安装Git](https://github.com/1145990396/git/blob/master/Photo/1.png?raw=true)
 
 ## 创建版本库
 ## 时光机穿梭
