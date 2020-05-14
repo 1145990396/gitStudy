@@ -397,7 +397,37 @@ Git的版本库里存了很多东西，其中最重要的就是称为stage（或
 > nothing to commit, working tree clean
 
 ### 管理修改
+为什么Git比其他版本控制系统设计得优秀，因为Git跟踪并管理的是修改，而非文件。
+
+第一次修改 -> `git add` -> 第二次修改 -> `git add` -> `git commit`
+
+每次修改，如果不用`git add`到暂存区，那就不会加入到`commit`中。
 ### 撤销修改
+
+`git checkout -- file`可以丢弃工作区的修改：
+> $ git checkout -- readme.txt
+
+命令`git checkout -- readme.txt`意思就是，把`readme.txt`文件在工作区的修改全部撤销，这里有两种情况：
+
+一种是`readme.txt`自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；
+
+一种是`readme.txt`已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。
+
+总之，就是让这个文件回到最近一次`git commit`或`git add`时的状态。
+
+`git checkout -- file`命令中的`--`很重要，没有`--`，就变成了“切换到另一个分支”的命令，我们在后面的分支管理中会再次遇到`git checkout`命令。
+
+如果已经`add`到暂存区了，在`commit`发现了这个问题用`git status`查看一下，修改只是添加到了暂存区，还没有提交
+
+用命令`git reset HEAD <file>`可以把暂存区的修改撤销掉（unstage），重新放回工作区：
+
+> $ git reset HEAD readme.txt
+>
+> Unstaged changes after reset:
+> M	readme.txt
+
+git reset命令既可以回退版本，也可以把暂存区的修改回退到工作区。当我们用HEAD时，表示最新的版本。
+
 ### 删除文件
 ## 远程仓库
 ### 添加远程库
