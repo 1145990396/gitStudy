@@ -563,6 +563,7 @@ git checkout其实是用版本库里的版本替换工作区的版本，无论�
 创建并切换到新的dev分支，可以使用：
 
 > $ git switch -c dev
+
 直接切换到已有的master分支，可以使用：
 
 > $ git switch master
@@ -582,8 +583,46 @@ Git鼓励大量使用分支：
 
 删除分支：`git branch -d <name>`
 ### 解决冲突
+当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。
+
+解决冲突就是把Git合并失败的文件手动编辑为我们希望的内容，再提交。
+
+用`git log --graph`命令可以看到分支合并图。
 ### 分支管理策略
+合并分支时，加上`--no-ff`参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而`fast forward`合并就看不出来曾经做过合并。
+
+> $ git merge --no-ff -m "merge with no-ff" dev
+
 ### Bug分支
+Git还提供了一个`stash`功能，可以把当前工作现场“储藏”起来，等以后恢复现场后继续工作：
+
+> $ git stash
+
+首先确定要在哪个分支上修复bug，假定需要在`master`分支上修复，就从`master`创建临时分支：
+
+> $ git checkout master
+
+> $ git checkout -b issue-101
+
+现在修复bug，需要把“Git is free software ...”改为“Git is a free software ...”，然后提交：
+
+> $ git add readme.txt 
+>
+>$ git commit -m "fix bug 101"
+
+修复完成后，切换到`master`分支，并完成合并，最后删除`issue-101`分支：
+
+> $ git switch master
+>
+> $ git merge --no-ff -m "merged bug fix 101" issue-101
+
+用git stash list命令看看刚才的工作现场存到哪去了
+
+> $ git stash list
+
+> 当手头工作没有完成时，先把工作现场`git stash`一下，然后去修复bug，修复后，再`git stash pop`，回到工作现场；
+> 
+> 在`master`分支上修复的bug，想要合并到当前dev分支，可以用`git cherry-pick <commit>`命令，把bug提交的修改“复制”到当前分支，避免重复劳动。
 ### Feature分支
 ### 多人协作
 ### Rebase
