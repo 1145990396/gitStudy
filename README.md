@@ -527,6 +527,7 @@ git checkout其实是用版本库里的版本替换工作区的版本，无论�
 `git branch`命令会列出所有分支，当前分支前面会标一个*号。
 
 然后，我们就可以在`dev`分支上正常提交，比如对`readme.txt`做个修改，加上一行：
+
 > Creating a new branch is quick.
 
 然后提交：
@@ -550,7 +551,7 @@ git checkout其实是用版本库里的版本替换工作区的版本，无论�
 
 > $ git merge dev
 
-`it merge`命令用于合并指定分支到当前分支
+`git merge`命令用于合并指定分支到当前分支
 
 合并完成后，就可以放心地删除dev分支了：
 > $ git branch -d dev
@@ -624,8 +625,69 @@ Git还提供了一个`stash`功能，可以把当前工作现场“储藏”起�
 > 
 > 在`master`分支上修复的bug，想要合并到当前dev分支，可以用`git cherry-pick <commit>`命令，把bug提交的修改“复制”到当前分支，避免重复劳动。
 ### Feature分支
+添加一个新功能时，你肯定不希望因为一些实验性质的代码，把主分支搞乱了，所以，每添加一个新功能，最好新建一个`feature`分支，在上面开发，完成后，合并，最后，删除该`feature`分支。
+
+> $ git switch -c feature-vulcan
+
+5分钟后，开发完毕：
+
+> $ git add vulcan.py
+>
+> $ git status
+>
+> $ git commit -m "add feature vulcan"
+
+切回`dev`，准备合并：
+
+> $ git switch dev
+
+就在此时，接到上级命令，因经费不足，新功能必须取消！
+
+> $ git branch -d feature-vulcan
+
+销毁失败。Git友情提醒，`feature-vulcan`分支还没有被合并，如果删除，将丢失掉修改，如果要强行删除，需要使用大写的`-D`参数。。
+
+现在我们强行删除：
+
+> $ git branch -D feature-vulcan
+
+开发一个新`feature`，最好新建一个分支；
+
+如果要丢弃一个没有被合并过的分支，可以通过`git branch -D <name>`强行删除。
 ### 多人协作
+多人协作的工作模式通常是这样：
+
+首先，可以试图用`git push origin <branch-name>`推送自己的修改；
+
+如果推送失败，则因为远程分支比你的本地更新，需要先用`git pull`试图合并；
+
+如果合并有冲突，则解决冲突，并在本地提交；
+
+没有冲突或者解决掉冲突后，再用`git push origin <branch-name>`推送就能成功！
+
+如果`git pull`提示`no tracking information`，则说明本地分支和远程分支的链接关系没有创建，用命令`git branch --set-upstream-to <branch-name> origin/<branch-name>`。
+
+这就是多人协作的工作模式，一旦熟悉了，就非常简单。
+
+
+查看远程库信息，使用`git remote -v`；
+
+本地新建的分支如果不推送到远程，对其他人就是不可见的；
+
+从本地推送分支，使用`git push origin branch-name`，如果推送失败，先用`git pull`抓取远程的新提交；
+
+在本地创建和远程分支对应的分支，使用`git checkout -b branch-name origin/branch-name`，本地和远程分支的名称最好一致；
+
+建立本地分支和远程分支的关联，使用`git branch --set-upstream branch-name origin/branch-name`；
+
+从远程抓取分支，使用`git pull`，如果有冲突，要先处理冲突。
 ### Rebase
+
+> $ git rebase
+
+rebase操作可以把本地未push的分叉提交历史整理成直线；
+
+rebase的目的是使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比。
 ## 标签管理
 ### 创建标签
 ### 操作标签
