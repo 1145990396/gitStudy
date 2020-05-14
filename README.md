@@ -134,6 +134,21 @@ Xcode是Apple官方IDE，功能非常强大，是开发Mac和iOS App的必选装
 >
 > $ git commit -m "add 3 files."
 ## 时光机穿梭
+我们已经成功地添加并提交了一个readme.txt文件，现在，是时候继续工作了，于是，我们继续修改readme.txt文件，改成如下内容：
+> Git is a distributed version control system.
+>
+> Git is free software.
+
+现在，运行`git status`命令看看结果：
+> $ git status
+> On branch master
+> Changes not staged for commit:
+>  (use "git add <file>..." to update what will be committed)
+>  (use "git checkout -- <file>..." to discard changes in working directory)
+>
+>	modified:   readme.txt
+>
+>no changes added to commit (use "git add" and/or "git commit -a")
 ### 版本回退
 ### 工作区和暂存区
 ### 管理修改
