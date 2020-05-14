@@ -67,6 +67,16 @@ Xcode是Apple官方IDE，功能非常强大，是开发Mac和iOS App的必选装
 安装完成后，在开始菜单里找到`Git`->`Git Bash`，蹦出一个类似命令行窗口的东西，就说明Git安装成功！
 ![在Windows上安装Git](https://github.com/1145990396/git/blob/master/Photo/1.png?raw=true)
 
+安装完成后，还需要最后一步设置，在命令行输入：
+
+< $ git config --global user.name "Your Name"
+<
+< $ git config --global user.email "email@email.com"
+
+因为Git是分布式版本控制系统，所以每个机器都要有你的名字和email地址。
+
+注意`git config`命令和`--global参数`，用了这个参数，表示你的机器上所以的Git库都会使用这个配置
+
 ## 创建版本库
 ## 时光机穿梭
 ### 版本回退
