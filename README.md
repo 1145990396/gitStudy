@@ -502,7 +502,85 @@ git checkout其实是用版本库里的版本替换工作区的版本，无论�
 
 `Git支持多种协议，包括https，但ssh协议速度最快。`
 ## 分支管理
+但Git的分支是与众不同的，无论创建、切换和删除分支，Git在1秒钟之内就能完成！无论你的版本库是1个文件还是1万个文件。
 ### 创建与合并分支
+首先，我们创建`dev`分支，然后切换到`dev`分支：
+
+> $ git checkout -b dev
+> Switched to a new branch 'dev'
+
+`git checkout`命令加上-b参数表示创建并切换，相当于以下两条命令：
+
+> $ git branch dev
+>
+> $ git checkout dev
+>
+> Switched to branch 'dev'
+
+然后，用`git branch`命令查看当前分支：
+> $ git branch
+>
+> * dev
+>
+>  master
+
+`git branch`命令会列出所有分支，当前分支前面会标一个*号。
+
+然后，我们就可以在`dev`分支上正常提交，比如对`readme.txt`做个修改，加上一行：
+> Creating a new branch is quick.
+
+然后提交：
+
+> $ git add readme.txt 
+>
+> $ git commit -m "branch test"
+>
+> [dev b17d20e] branch test
+ 1 file changed, 1 insertion(+)
+
+现在，`dev`分支的工作完成，我们就可以切换回`master`分支：
+
+>　$ git checkout master
+>
+> Switched to branch 'master'
+
+切换回`master`分支后，再查看一个`readme.txt`文件，刚才添加的内容不见了！因为那个提交是在`dev`分支上，而`master`分支此刻的提交点并没有变：
+
+现在，我们把`dev`分支的工作成果合并到`master`分支上：
+
+> $ git merge dev
+
+`it merge`命令用于合并指定分支到当前分支
+
+合并完成后，就可以放心地删除dev分支了：
+> $ git branch -d dev
+
+删除后，查看branch，就只剩下master分支了：
+
+> $ git branch
+
+用switch更科学。因此，最新版本的Git提供了新的git switch命令来切换分支：
+创建并切换到新的dev分支，可以使用：
+
+> $ git switch -c dev
+直接切换到已有的master分支，可以使用：
+
+> $ git switch master
+
+
+Git鼓励大量使用分支：
+
+查看分支：`git branch`
+
+创建分支：`git branch <name>`
+
+切换分支：`git checkout <name>或者git switch <name>`
+
+创建+切换分支：`git checkout -b <name>或者git switch -c <name>`
+
+合并某分支到当前分支：`git merge <name>`
+
+删除分支：`git branch -d <name>`
 ### 解决冲突
 ### 分支管理策略
 ### Bug分支
