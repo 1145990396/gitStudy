@@ -485,7 +485,22 @@ git checkout其实是用版本库里的版本替换工作区的版本，无论�
 > $ git push -u origin master
 
 把本地库的内容推送到远程，用git push命令，实际上是把当前分支master推送到远程。
+
+`要关联一个远程库，使用命令git remote add origin git@server-name:path/repo-name.git；`
+
+`关联后，使用命令git push -u origin master第一次推送master分支的所有内容；`
+
+`此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改；`
 ### 从远程库克隆
+命令git clone克隆一个本地库：
+
+> $ git clone git@github.com:1145990396/gitskills.git
+
+如果有多个人协作开发，那么每个人各自从远程克隆一份就可以了。
+
+`还可以用https://github.com/1145990396/git.git这样的地址。实际上，Git支持多种协议，默认的git://使用ssh，但也可以使用https等其他协议。`
+
+`Git支持多种协议，包括https，但ssh协议速度最快。`
 ## 分支管理
 ### 创建与合并分支
 ### 解决冲突
