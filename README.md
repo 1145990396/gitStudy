@@ -69,9 +69,9 @@ Xcode是Apple官方IDE，功能非常强大，是开发Mac和iOS App的必选装
 
 安装完成后，还需要最后一步设置，在命令行输入：
 
-< $ git config --global user.name "Your Name"
-<
-< $ git config --global user.email "email@email.com"
+> $ git config --global user.name "Your Name"
+>
+> $ git config --global user.email "email@email.com"
 
 因为Git是分布式版本控制系统，所以每个机器都要有你的名字和email地址。
 
