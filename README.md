@@ -433,7 +433,26 @@ git reset命令既可以回退版本，也可以把暂存区的修改回退到�
 场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令git reset HEAD <file>，就回到了场景1，第二步按场景1操作。
 
 场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交,只能版本回退了
+
 ### 删除文件
+有两个选择 一是确实要从版本库中删除该文件，那就用命令`git rm`删掉，并且`git commit`：
+> $ git rm test.txt
+>
+>rm 'test.txt'
+
+> $ git commit -m "remove test.txt"
+>
+> [master d46f35e] remove test.txt
+>  1 file changed, 1 deletion(-)
+>  delete mode 100644 test.txt
+
+另一种情况是删错了，因为版本库里还有呢，所以可以很轻松地把误删的文件恢复到最新版本：
+
+> $ git checkout -- test.txt
+
+git checkout其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。
+
+ `注意：从来没有被添加到版本库就被删除的文件，是无法恢复的！`
 ## 远程仓库
 ### 添加远程库
 ### 从远程库克隆
