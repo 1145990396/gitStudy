@@ -304,25 +304,39 @@ Xcode是Apple官方IDE，功能非常强大，是开发Mac和iOS App的必选装
 
 Git的版本回退速度非常快，因为Git在内部有个指向当前版本的`HEAD`指针，当你回退版本的时候，Git仅仅是把`HEAD`从指向`append GPL`：
 > ┌────┐
+>
 > │HEAD│
-> └────┘
+>
 >   │
+>
 >   └──> ○ append GPL
+>
 >        │
+>
 >        ○ add distributed
+>
 >        │
+>
 >        ○ wrote a readme file
 
 改为指向add distributed：
 
 > ┌────┐
+>
 > │HEAD│
+>
 > └────┘
+>
 >   │
+>
 >   │    ○ append GPL
+>
 >   │    │
+>
 >   └──> ○ add distributed
+>
 >        │
+>
 >        ○ wrote a readme file
 
 然后顺便把工作区的文件更新了。所以你让HEAD指向哪个版本号，你就把当前版本定位在哪。
