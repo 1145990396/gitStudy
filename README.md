@@ -23,7 +23,6 @@
 	- [创建标签](#创建标签)
 	- [操作标签](#操作标签)
 - [使用GitHub](#使用GitHub)
-- [使用Gitee](#使用Gitee)
 - [自定义Git](#自定义Git)
 	- [忽略特殊文件](#忽略特殊文件)
 	- [配置别名](#配置别名)
@@ -744,8 +743,19 @@ rebase的目的是使得我们在查看历史提交的变化时更容易，因�
 
 命令`git push origin :refs/tags/<tagname>`可以删除一个远程标签。
 ## 使用GitHub
-## 使用Gitee
+如何参与一个开源项目呢？比如人气极高的bootstrap项目，这是一个非常强大的CSS框架，你可以访问它的项目主页https://github.com/twbs/bootstrap，点“Fork”就在自己的账号下克隆了一个bootstrap仓库，然后，从自己的账号下clone：
+
+> git clone git@github.com:twbs/bootstrap.git
+
+在GitHub上，可以任意Fork开源仓库；
+
+自己拥有Fork后的仓库的读写权限；
+
+可以推送pull request给官方仓库来贡献代码。
 ## 自定义Git
+让Git显示颜色，会让命令输出看起来更醒目：
+
+> git config --global color.ui true
 ### 忽略特殊文件
 ### 配置别名
 ### 搭建Git服务器
