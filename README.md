@@ -850,3 +850,7 @@ Git就会创建一个裸仓库，裸仓库没有工作区，因为服务器上�
 
 要像SVN那样变态地控制权限，用`Gitolite`。
 ## 使用SourceTree
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/1145990396/Spring.git
+git push -u origin master
