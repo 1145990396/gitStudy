@@ -841,7 +841,7 @@ Git就会创建一个裸仓库，裸仓库没有工作区，因为服务器上�
 管理权限
 有很多不但视源代码如生命，而且视员工为窃贼的公司，会在版本控制系统里设置一套完善的权限控制，每个人是否有读写权限会精确到每个分支甚至每个目录下。因为Git是为Linux源代码托管而开发的，所以Git也继承了开源社区的精神，不支持权限控制。不过，因为Git支持钩子（hook），所以，可以在服务器端编写一系列脚本来控制提交等操作，达到权限控制的目的。`Gitolite`就是这个工具。
 
-这里我们也不介绍`Gitolite`了，不要把有限的生命浪费到权限斗争中。
+这里我也不介绍`Gitolite`了，不要把有限的生命浪费到权限斗争中。
 
 小结
 搭建`Git`服务器非常简单，通常10分钟即可完成；
@@ -850,7 +850,4 @@ Git就会创建一个裸仓库，裸仓库没有工作区，因为服务器上�
 
 要像SVN那样变态地控制权限，用`Gitolite`。
 ## 使用SourceTree
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/1145990396/Spring.git
-git push -u origin master
+
